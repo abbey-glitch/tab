@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Table</title>
+</head>
+<body>
+    <div id="wrapper">
+        <table border="1" cellpadding="9" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>DAYS/TIME</th>
+                    <th>9:00 - 10:00</th>
+                    <th>10:00  - 11:00</th>
+                    <th>11:00 - 12:00</th>
+                    <th>12:00 - 1:00</th>
+                    <th>1:00 - 1:30</th>
+                    <th>1:30 - 2:00</th>
+                    <th>2:30 - 3:00</th>
+                    <th>3:30 - 4:00</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mon</td>
+                    <td colspan="2">Maths</td>
+                    <td>Eng</td>
+                    <td>Phy</td>
+                    <td>chem</td>
+                    <td rowspan="5" class="vertical">Break</td>
+                    <td>comm</td>
+                    <td>Econs</td>
+                </tr>
+                <tr>
+                    <td>Tue</td>
+                    <td>Maths</td>
+                    <td colspan="2">chem</td>
+                    <td>Econs</td>
+                    <td>math</td>
+                    <td>comm</td>
+                    <td>phy</td>
+                </tr>
+                <tr>
+                    <td>Wed</td>
+                    <td>Maths</td>
+                    <td>Econs</td>
+                    <td>Phy</td>
+                    <td colspan="2">comm</td>
+                    <td>chem</td>
+                    <td>Eng</td>
+                </tr>
+                <tr>
+                    <td>Thur</td>
+                    <td>Phy</td>
+                    <td colspan="2">Eng</td>
+                    <td>Math</td>
+                    <td>comm</td>
+                    <td>Econs</td>
+                    <td>Econs</td>
+                </tr>
+                <tr>
+                    <td>Fri</td>
+                    <td>Comm</td>
+                    <td>Phy</td>
+                    <td>Eng</td>
+                    <td colspan="2">chem</td>
+                    <td >Yor</td>
+                    <td>French</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="animation">
+            <div class="anime">box
+                <div class="inner">&copy;</p></div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        #animation{
+            background-color: grey;
+            padding: 2em;
+            width:50%;
+        }
+        .anime{
+            background-color: red;
+            /* padding: 5em; */
+            border-radius: 50%;
+            margin-left: 5em;
+            margin-right: 5em;
+            position: relative;
+        }
+        .inner{
+            background-color:white;
+            padding: 2em; 
+            margin: 10em;
+            border-radius: 50%;
+            transition: all .2s linear;
+            animation: balling 2s ease-out infinite;
+        }
+        @keyframes balling {
+            0%{
+                transform: rotate(20deg);
+                transition: all .2s linear;
+            }
+            20%{
+                transform: rotate(40deg);
+                background-color: green;
+            }
+            30%{
+                transform: rotate(60deg);
+            }
+            40%{
+                transform: rotate(80deg);
+                background-color: yellow;
+            }
+        }
+    </style>
+    <script>
+        class school{
+            constructor(name, student, principal, age){
+                this.name = name;
+                this.student = student;
+                this.principal=principal;
+                this.age = age;
+            }
+            getDetails(){
+                return [console.log(`the school name is ' ${this.name}`)];
+            }
+        }
+        let identity = new school('Deft', 'emma', 'kunle', 20);
+        identity.getDetails();
+        
+    </script>
+</body>
+</html>
